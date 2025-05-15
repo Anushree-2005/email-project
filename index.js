@@ -6,7 +6,10 @@ const cors = require('cors');
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'https://email-project-sigma.vercel.app'
+}));
+
 app.use(express.json());
 
 // Serve static files from current directory
@@ -58,7 +61,7 @@ app.post('/send-email', async (req, res) => {
           </tr>
           <tr>
             <td align="center" style="padding:30px 0;">
-              <a href="http://localhost:3000" target="_blank" style="background-color:#28a745; color:#ffffff; text-decoration:none; padding:12px 24px; border-radius:5px; font-weight:bold;">Visit My Webpage Again</a>
+              <a href="https://email-project-sigma.vercel.app/" target="_blank" style="background-color:#28a745; color:#ffffff; text-decoration:none; padding:12px 24px; border-radius:5px; font-weight:bold;">Visit My Webpage Again</a>
             </td>
           </tr>
           <tr>
